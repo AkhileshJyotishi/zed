@@ -64,7 +64,7 @@ const DashboardPage = () => {
           // console.log(response);
           const hashVector = []
           console.log(response.data.result)
-          let size = response.data.result.length
+          const size = response.data.result.length
           for (let i = 0; i < size; i++) {
             const transaction = response.data.result[i]
             if (transaction.contractAddress != "") {
