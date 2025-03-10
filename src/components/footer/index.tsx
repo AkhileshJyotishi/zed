@@ -28,7 +28,7 @@ const Footer: React.FC<FooterProps> = ({ footerLogo, footerLinks, footerText }) 
             className="mb-4 flex items-center space-x-3 sm:mb-0 rtl:space-x-reverse"
           >
             <img
-              src={"/logo-white.svg"}
+              src={"/logo-white.png"}
               className="w-20"
               alt={footerLogo.alt}
             />
