@@ -48,7 +48,7 @@ class CustomConnection(BaseConnection):
                     ActionParameter("method", False, str, "HTTP method (GET, POST, etc.), default is GET"),
                     ActionParameter("params", False, str, "Query parameters for the request"),
                     ActionParameter("body", False, dict, "Request body for POST requests"),
-                    ActionParameter("headers", False, dict, "Custom headers if needed"),
+                    ActionParameter("headers", False, dict, "Add Custom headers if needed"),
                 ],
                 description="Fetch data from a custom API"
             )
