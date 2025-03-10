@@ -92,7 +92,7 @@ class GeminiConnection(BaseConnection):
             if response.lower() != 'y':
                 return True
 
-        logger.info("\n📝 To get your Gemini API credentials:")
+        logger.info("\n📝 To get your Gemini API credentials: ")
         logger.info("Go to https://ai.google.dev")
         
         api_key = input("\nEnter your Gemini API key: ")
