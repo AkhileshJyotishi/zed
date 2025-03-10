@@ -160,19 +160,23 @@ Decode a transaction (and AI explanation) to understand the details of the trans
 
 The following individuals have contributed to this project:
 
-### 1. [Umesh Singh Verma](https://github.com/umeshSinghVerma)  
-- **Role:** AI Engineer  
-- **Responsibilities:** Designed and integrated AI agents to automate data structuring and insights.  
+### 1. [Umesh Singh Verma](https://github.com/umeshSinghVerma)
 
-### 2. [Akhilesh Jyotishi](https://github.com/AkhileshJyotishi)  
-- **Role:** Full Stack Developer  
-- **Responsibilities:** Developed key frontend components and built the backend to power the platform.  
+- **Role:** AI Engineer
+- **Responsibilities:** Designed and integrated AI agents to automate data structuring and insights.
 
-### 3. [Disha Dwivedi](https://github.com/Dis1309)  
-- **Role:** Blockchain Developer  
-- **Responsibilities:** Developed and deployed secure smart contracts for NFT-based data transactions.  
+### 2. [Akhilesh Jyotishi](https://github.com/AkhileshJyotishi)
 
-### 4. [Ankit Yadav](https://github.com/ANKITy102)  
-- **Role:** Frontend Developer  
-- **Responsibilities:** Built the core UI and seamlessly integrated backend APIs for a smooth user experience.  
+- **Role:** Full Stack Developer
+- **Responsibilities:** Developed key frontend components and built the backend to power the platform.
+
+### 3. [Disha Dwivedi](https://github.com/Dis1309)
+
+- **Role:** Blockchain Developer
+- **Responsibilities:** Developed and deployed secure smart contracts for NFT-based data transactions.
+
+### 4. [Ankit Yadav](https://github.com/ANKITy102)
+
+- **Role:** Frontend Developer
+- **Responsibilities:** Built the core UI and seamlessly integrated backend APIs for a smooth user experience.
 

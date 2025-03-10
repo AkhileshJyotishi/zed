@@ -43,13 +43,15 @@ const Audit = ({ selectedFile }: { selectedFile: File | undefined }) => {
         role: "user",
       },
     ]
-    axios.post("/api/audit", {
-      messages: payload
-    }).then((newCompletion) => {
-      console.log("please check : ", newCompletion.data.result)
-      const aiResponse = newCompletion || "There was an error with the AI response. Please try again."
-      setText(newCompletion.data.result) // Store parsed JSON in state
-    })
+    axios
+      .post("/api/audit", {
+        messages: payload,
+      })
+      .then((newCompletion) => {
+        console.log("please check : ", newCompletion.data.result)
+        const aiResponse = newCompletion || "There was an error with the AI response. Please try again."
+        setText(newCompletion.data.result) // Store parsed JSON in state
+      })
       .catch((err) => console.log(err))
       .finally(() => {
         setLoading(false)

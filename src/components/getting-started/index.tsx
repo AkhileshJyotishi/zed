@@ -90,13 +90,14 @@ const GettingStarted = () => {
 
     const payload: Content[] = [sampleUseCase]
     let code = ""
-    axios.post("/api/customize", {
-      messages: payload
-    })
+    axios
+      .post("/api/customize", {
+        messages: payload,
+      })
       .then((newCompletion) => {
         console.log("reached")
         console.log("print: ", newCompletion)
-        
+
         const aiResponse = newCompletion.data.result || "There was an error with the AI response. Please try again."
         console.log(aiResponse)
         const cleanedResponse = aiResponse.replace(/```(\w+)?/g, "") // Remove code block formatting

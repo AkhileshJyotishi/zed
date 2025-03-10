@@ -86,7 +86,7 @@ const FileDiv = ({
         onClick={onClick}
         style={{ paddingLeft: `${depth * 10}px` }}
         className={clsx("flex cursor-pointer items-center gap-2 hover:bg-[#3c3c3c]")}
-      // onMouseOver={()=>sethovercss(true)}
+        // onMouseOver={()=>sethovercss(true)}
       >
         <FileIcon
           name={icon}

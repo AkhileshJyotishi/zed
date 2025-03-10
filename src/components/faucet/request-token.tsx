@@ -8,28 +8,27 @@ interface RequestTokenProps {
 }
 
 const RequestToken: React.FC<RequestTokenProps> = ({ address }) => {
-
-  const url = "http://localhost:3000/api/faucet";
+  const url = "http://localhost:3000/api/faucet"
 
   const handleRequest = async () => {
     try {
-toast.info("Requesting airdrop...");
-      const response = await axios.post(url, { address });
+      toast.info("Requesting airdrop...")
+      const response = await axios.post(url, { address })
       if (response.data.transactionHash) {
         toast.success("Token request sent successfully")
       } else {
-        toast.error("Unexpected response from the server");
+        toast.error("Unexpected response from the server")
       }
     } catch (error) {
-      console.error("Error during transfer:", error);
-      toast.error("Sonic transfer failed");
+      console.error("Error during transfer:", error)
+      toast.error("Sonic transfer failed")
     }
-  };
+  }
 
   return (
     <button
       className="transition-transfor mt-4 w-full transform rounded bg-gradient-to-r from-green-400 to-blue-500 px-4 py-2 font-bold text-white shadow-lg hover:from-green-500 hover:to-blue-600"
-      onClick={handleRequest }
+      onClick={handleRequest}
     >
       Request Sonic airdrop
     </button>

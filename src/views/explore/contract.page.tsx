@@ -86,7 +86,7 @@ export const ContractCard = ({ contract, className }: { contract: IContracts; cl
               }}
               variant="outline"
               className="text-sm"
-            // className="ring-offset-background focus-visible:ring-ring text-primary-foreground relative z-10 inline-flex h-auto items-center justify-center gap-1.5 whitespace-nowrap rounded-md bg-primary px-2.5 py-1.5 text-xs font-medium transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50"
+              // className="ring-offset-background focus-visible:ring-ring text-primary-foreground relative z-10 inline-flex h-auto items-center justify-center gap-1.5 whitespace-nowrap rounded-md bg-primary px-2.5 py-1.5 text-xs font-medium transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50"
             >
               Customize
             </Button>

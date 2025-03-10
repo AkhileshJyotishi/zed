@@ -74,12 +74,13 @@ const metadata: WalletMetadata[] = [
   // },
 ]
 
-
 export const SonicMetadata: Web3ChainData = {
   chainId: "0xDEDE", // 123454321 in hex
   chainName: "Sonic Blaze Testnet",
   nativeCurrency: {
-    name: "Sonic", symbol: "S", decimals: 18
+    name: "Sonic",
+    symbol: "S",
+    decimals: 18,
   },
   rpcUrls: ["https://rpc.blaze.soniclabs.com"],
   blockExplorerUrls: ["https://testnet.sonicscan.org"],

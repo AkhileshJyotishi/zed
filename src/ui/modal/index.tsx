@@ -47,7 +47,7 @@ export const CustomizeModal = ({
 
   const onSubmit = () => {
     setMessages((prev) => [...prev, { role: "user", content: text }])
-   console.log("hello")
+    console.log("hello")
     const payload: Content[] = [
       GenerateCustomizationInstructions(),
       {
@@ -55,17 +55,19 @@ export const CustomizeModal = ({
         role: "user",
       },
     ]
-    axios.post("/api/customize", {
-      messages: payload
-    })
+    axios
+      .post("/api/customize", {
+        messages: payload,
+      })
       .then((newCompletion) => {
         console.log("reached")
         console.log("print: ", newCompletion)
-        
+
         const aiResponse = newCompletion.data.result || "There was an error with the AI response. Please try again."
         const cleanedResponse = String(aiResponse).replace(/```(\w+)?/g, "")
         setMessages((prev) => [...prev, { role: "ai", content: cleanedResponse }])
-      }).catch((err) => console.log(err))
+      })
+      .catch((err) => console.log(err))
     setText("")
   }
 
