@@ -59,7 +59,7 @@ const DashboardPage = () => {
     const fetchContracts = async () => {
       try {
         if (isConnected && address) {
-          const url = `https://api-testnet.sonicscan.org/api?module=account&action=txlist&address=${address}&startblock=0&endblock=99999999&page=1&offset=10&sort=asc&apikey=HRM85EHC5SF8F45K99P85F3MZQTI99QK4N`
+          const url = `https://api-testnet.sonicscan.org/api?module=account&action=txlist&address=${address}&startblock=0&endblock=99999999&page=1&offset=10&sort=asc&apikey=${process.env.NEXT_PUBLIC_API_KEY}`
           const response = await axios.get(url)
           // console.log(response);
           const hashVector = []
