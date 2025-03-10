@@ -176,6 +176,3 @@ The following individuals have contributed to this project:
 - **Role:** Frontend Developer  
 - **Responsibilities:** Built the core UI and seamlessly integrated backend APIs for a smooth user experience.  
 
-### 5. [Shubham Roy](https://github.com/sr2005roy)  
-- **Role:** Manager  
-- **Responsibilities:** Supervised development, reported bugs, and crafted detailed project documentation.  
