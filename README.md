@@ -7,7 +7,7 @@
     ·
     <a href="mailto:akhileshjyotishi1729@gmail.com">Contact us</a>
     ·
-    <a href="https://github.com/karthiks373/arc/issues">Request Feature</a>
+    <a href="https://github.com/AkhileshJyotishi/zed/issues">Request Feature</a>
   </p>
 </div>
 
