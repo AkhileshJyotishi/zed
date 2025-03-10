@@ -84,7 +84,7 @@ class CustomConnection(BaseConnection):
         print(headers)
         if isinstance(params, str):
             try:
-                params = json.loads(params)  # Convert JSON string to dict
+                params = json.loads(params)
             except json.JSONDecodeError:
                 raise ValueError("Invalid JSON string in 'params'")
         print(params)
@@ -103,7 +103,6 @@ class CustomConnection(BaseConnection):
         if action_name not in self.actions:
             raise KeyError(f"Unknown action: {action_name}")
 
-        # Reload environment variables (if any are used)
         load_dotenv()
 
         if not self.is_configured(verbose=True):
