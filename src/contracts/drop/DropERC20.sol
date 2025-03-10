@@ -137,39 +137,6 @@ contract DropERC20 is
         require(_maxTotalSupply == 0 || totalSupply() + _quantity <= _maxTotalSupply, "exceed max total supply.");
     }
 
-    /// @dev Collects and distributes the primary sale value of tokens being claimed.
-    function _collectPriceOnClaim(
-        address _primarySaleRecipient,
-        uint256 _quantityToClaim,
-        address _currency,
-        uint256 _pricePerToken
-    ) internal override {
-        if (_pricePerToken == 0) {
-            require(msg.value == 0, "!Value");
-            return;
-        }
-
-        (address platformFeeRecipient, uint16 platformFeeBps) = getPlatformFeeInfo();
-
-        address saleRecipient = _primarySaleRecipient == address(0) ? primarySaleRecipient() : _primarySaleRecipient;
-
-        // `_pricePerToken` is interpreted as price per 1 ether unit of the ERC20 tokens.
-        uint256 totalPrice = (_quantityToClaim * _pricePerToken) / 1 ether;
-        require(totalPrice > 0, "quantity too low");
-
-        uint256 platformFees = (totalPrice * platformFeeBps) / MAX_BPS;
-
-        bool validMsgValue;
-        if (_currency == CurrencyTransferLib.NATIVE_TOKEN) {
-            validMsgValue = msg.value == totalPrice;
-        } else {
-            validMsgValue = msg.value == 0;
-        }
-        require(validMsgValue, "Invalid msg value");
-
-        CurrencyTransferLib.transferCurrency(_currency, _msgSender(), platformFeeRecipient, platformFees);
-        CurrencyTransferLib.transferCurrency(_currency, _msgSender(), saleRecipient, totalPrice - platformFees);
-    }
 
     /// @dev Transfers the tokens being claimed.
     function _transferTokensOnClaim(address _to, uint256 _quantityBeingClaimed) internal override returns (uint256) {
