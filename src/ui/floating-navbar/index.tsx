@@ -27,7 +27,7 @@ export const FloatingNav = ({
 }) => {
   const pathname = usePathname()
   const { scrollYProgress } = useScroll()
-
+  console.log(className)
   const [visible, setVisible] = useState(true)
   const [width, setWidth] = useState("80%")
 

@@ -1,7 +1,6 @@
 "use client"
 import React, { CSSProperties, useState } from "react"
 
-import { useCompletion } from "ai/react"
 import SyncLoader from "react-spinners/SyncLoader"
 
 import { Directory, File } from "@/interface/custom/folder-tree/folder-tree"
@@ -28,9 +27,6 @@ const Plugin = ({
   rootDir: Directory
   setRootDir: React.Dispatch<React.SetStateAction<Directory | undefined>>
 }) => {
-  const { complete } = useCompletion({
-    api: "/api/audit",
-  })
   const [name, setname] = useState(selectedFile?.name)
   const [loading, setLoading] = useState(false)
   const [color] = useState("#ffffff")

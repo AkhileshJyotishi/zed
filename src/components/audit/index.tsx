@@ -1,7 +1,6 @@
 "use client"
 import React, { CSSProperties, useState } from "react"
 
-import { useCompletion } from "ai/react"
 import axios from "axios"
 import SyncLoader from "react-spinners/SyncLoader"
 
@@ -24,10 +23,6 @@ type resp = [
 ]
 
 const Audit = ({ selectedFile }: { selectedFile: File | undefined }) => {
-  const { complete } = useCompletion({
-    api: "/api/audit",
-  })
-
   const [text, setText] = useState<resp>()
   const [loading, setLoading] = useState(false)
   const [color] = useState("#ffffff")
@@ -49,8 +44,7 @@ const Audit = ({ selectedFile }: { selectedFile: File | undefined }) => {
       })
       .then((newCompletion) => {
         console.log("please check : ", newCompletion.data.result)
-        const aiResponse = newCompletion || "There was an error with the AI response. Please try again."
-        setText(newCompletion.data.result) // Store parsed JSON in state
+        setText(newCompletion.data.result || "There was an error with the AI response. Please try again.") // Store parsed JSON in state
       })
       .catch((err) => console.log(err))
       .finally(() => {

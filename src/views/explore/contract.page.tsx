@@ -8,7 +8,6 @@ import axios from "axios"
 
 import { contract } from "@/data"
 
-import { cn } from "@/lib/utils"
 import { Button } from "@/ui/button"
 import { Grid } from "@/ui/explore-grid-design"
 import { CustomizeModal } from "@/ui/modal"

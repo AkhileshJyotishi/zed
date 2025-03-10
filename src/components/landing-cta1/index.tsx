@@ -14,7 +14,6 @@ import Alt from "@/assets/images/IDE.png"
 import IDE from "@/assets/images/IDE.png"
 import Opt from "@/assets/images/optimizations.png"
 import Vulnerability from "@/assets/images/vulnerability.png"
-import { cn } from "@/lib/utils"
 import clsx from "clsx"
 
 export function FeaturesSectionDemo() {

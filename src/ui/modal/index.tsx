@@ -3,8 +3,6 @@ import React, { useEffect, useRef, useState } from "react"
 
 import { useRouter } from "next/navigation"
 
-import { useCompletion } from "ai/react"
-
 import { Directory, File } from "@/interface/custom/folder-tree/folder-tree"
 import { Content } from "@google/generative-ai"
 
@@ -36,10 +34,6 @@ export const CustomizeModal = ({
   const [messages, setMessages] = useState<{ role: "user" | "ai" | "generic"; content: string }[]>([
     { content, role: "ai" },
   ])
-
-  const { complete } = useCompletion({
-    api: "/api/customize",
-  })
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setText(e.target.value)

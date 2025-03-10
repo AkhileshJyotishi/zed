@@ -2,7 +2,6 @@ import React, { useState } from "react"
 
 import { Directory, File as CustomFile, FileTreeProps, SubTreeProps } from "@/interface/custom/folder-tree/folder-tree"
 
-import { cn } from "@/lib/utils"
 import { FileIcon, sortDir, sortFile } from "@/ui/file-tree/file-utils"
 import { ExtensionTypes } from "@/ui/icons"
 import clsx from "clsx"

@@ -14,7 +14,6 @@ import { searchModule } from "@/data"
 
 import { Chads } from "../../components/avatar"
 import { Button } from "@/ui/button"
-import { string } from "zod"
 
 interface ITransaction {
   blockNumber: string
@@ -65,9 +64,9 @@ const DashboardPage = () => {
           // console.log(response);
           const hashVector = []
           console.log(response.data.result)
-          var size = response.data.result.length
-          for (var i = 0; i < size; i++) {
-            var transaction = response.data.result[i]
+          let size = response.data.result.length
+          for (let i = 0; i < size; i++) {
+            const transaction = response.data.result[i]
             if (transaction.contractAddress != "") {
               console.log(transaction.contractAddress)
               console.log(transaction.hash)

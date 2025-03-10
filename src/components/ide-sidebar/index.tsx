@@ -3,7 +3,6 @@ import React from "react"
 
 import { AnimatePresence, motion } from "framer-motion"
 
-import { cn } from "@/lib/utils"
 import { useSidebar } from "@/providers/sidebar"
 import clsx from "clsx"
 // import { IconMenu2, IconX } from "@tabler/icons-react";

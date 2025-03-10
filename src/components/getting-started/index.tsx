@@ -1,7 +1,6 @@
 "use client"
 import React, { useState } from "react"
 
-import { useCompletion } from "ai/react"
 import clsx from "clsx"
 import Slider from "react-slick"
 
@@ -9,7 +8,6 @@ import { createProject, init, templates } from "@/data/sample"
 import { Directory, File } from "@/interface/custom/folder-tree/folder-tree"
 import { Content } from "@google/generative-ai"
 
-import { cn } from "@/lib/utils"
 import { useIDE } from "@/providers/ide"
 import { Button } from "@/ui/button"
 import { GenerateCodeInstructions } from "@/utils/prompt"
@@ -29,9 +27,6 @@ const GettingStarted = () => {
   const [loading, setLoading] = useState<boolean>(false)
   const [prompt, setPrompt] = useState("")
 
-  const { complete } = useCompletion({
-    api: "/api/customize",
-  })
   const [activePanel, setActivePanel] = useState<string | null>(null)
 
   const handlePanelClick = (panel: string) => {

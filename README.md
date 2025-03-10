@@ -179,4 +179,3 @@ The following individuals have contributed to this project:
 
 - **Role:** Frontend Developer
 - **Responsibilities:** Built the core UI and seamlessly integrated backend APIs for a smooth user experience.
-
