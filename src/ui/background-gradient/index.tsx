@@ -2,7 +2,6 @@ import React from "react"
 
 import { motion } from "framer-motion"
 
-import { cn } from "@/lib/utils"
 import clsx from "clsx"
 
 export const BackgroundGradient = ({
@@ -33,10 +32,10 @@ export const BackgroundGradient = ({
         transition={
           animate
             ? {
-              duration: 5,
-              repeat: Infinity,
-              repeatType: "reverse",
-            }
+                duration: 5,
+                repeat: Infinity,
+                repeatType: "reverse",
+              }
             : undefined
         }
         style={{
@@ -54,10 +53,10 @@ export const BackgroundGradient = ({
         transition={
           animate
             ? {
-              duration: 5,
-              repeat: Infinity,
-              repeatType: "reverse",
-            }
+                duration: 5,
+                repeat: Infinity,
+                repeatType: "reverse",
+              }
             : undefined
         }
         style={{

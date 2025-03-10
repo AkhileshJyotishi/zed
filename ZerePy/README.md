@@ -14,6 +14,7 @@ similar core functionality as Zerebro. For creative outputs, you'll need to fine
 - Blockchain integration
 
 ### Platform Integrations
+
 - Social Platforms:
   - Twitter/X
   - Farcaster
@@ -23,7 +24,7 @@ similar core functionality as Zerebro. For creative outputs, you'll need to fine
   - Solana
   - EVM Networks:
     - Ethereum
-    - Sonic 
+    - Sonic
 - AI/ML Tools:
   - GOAT (Onchain Agent Toolkit)
   - Allora (Network inference)
@@ -197,10 +198,7 @@ poetry add goat-sdk-plugin-coingecko     # For price data
            {
              "name": "erc20",
              "args": {
-               "tokens": [
-                 "goat_plugins.erc20.token.PEPE",
-                 "goat_plugins.erc20.token.USDC"
-               ]
+               "tokens": ["goat_plugins.erc20.token.PEPE", "goat_plugins.erc20.token.USDC"]
              }
            },
            {
@@ -244,11 +242,7 @@ Each plugin has its own configuration options that can be specified in the agent
    {
      "name": "erc20",
      "args": {
-       "tokens": [
-         "goat_plugins.erc20.token.USDC",
-         "goat_plugins.erc20.token.PEPE",
-         "goat_plugins.erc20.token.DAI"
-       ]
+       "tokens": ["goat_plugins.erc20.token.USDC", "goat_plugins.erc20.token.PEPE", "goat_plugins.erc20.token.DAI"]
      }
    }
    ```
@@ -266,6 +260,7 @@ Each plugin has its own configuration options that can be specified in the agent
 ## Platform Features
 
 ### GOAT
+
 - Unified EVM chain interface
 - ERC20 token management (balances, transfers, approvals)
 - Real-time crypto data and market tracking
@@ -273,12 +268,15 @@ Each plugin has its own configuration options that can be specified in the agent
 - Multi-chain support with secure wallet management
 
 ### Blockchain Networks
+
 - Solana
+
   - SOL/SPL transfers and swaps via Jupiter
   - Staking and balance management
   - Network monitoring and token queries
 
 - EVM Networks
+
   - Ethereum
     - ETH/ERC-20 transfers and swaps
     - Kyberswap integration
@@ -296,17 +294,21 @@ Each plugin has its own configuration options that can be specified in the agent
   - Decentralized inference
 
 ### Social Platforms
+
 - Twitter/X
+
   - Post and reply to tweets
   - Timeline management
   - Engagement features
 
 - Farcaster
+
   - Cast creation and interactions
   - Timeline and reply management
   - Like/requote functionality
 
 - Discord
+
   - Channel management
   - Message operations
   - Reaction handling
@@ -334,7 +336,7 @@ Create a new JSON file in the `agents` directory following this structure:
   ],
   "traits": ["Curious", "Creative", "Innovative", "Funny"],
   "examples": ["This is an example tweet.", "This is another example tweet."],
-  "example_accounts" : ["X_username_to_use_for_tweet_examples"],
+  "example_accounts": ["X_username_to_use_for_tweet_examples"],
   "loop_delay": 900,
   "config": [
     {

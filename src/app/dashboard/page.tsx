@@ -14,29 +14,28 @@ import { searchModule } from "@/data"
 
 import { Chads } from "../../components/avatar"
 import { Button } from "@/ui/button"
-import { string } from "zod"
 
 interface ITransaction {
-  blockNumber: string;
-  timeStamp: string;
-  hash: string;
-  nonce: string;
-  blockHash: string;
-  transactionIndex: string;
-  from: string;
-  to: string;
-  value: string;
-  gas: string;
-  gasPrice: string;
-  isError: string;
-  txreceipt_status: string;
-  input: string;
-  contractAddress: string;
-  cumulativeGasUsed: string;
-  gasUsed: string;
-  confirmations: string;
-  methodId: string;
-  functionName: string;
+  blockNumber: string
+  timeStamp: string
+  hash: string
+  nonce: string
+  blockHash: string
+  transactionIndex: string
+  from: string
+  to: string
+  value: string
+  gas: string
+  gasPrice: string
+  isError: string
+  txreceipt_status: string
+  input: string
+  contractAddress: string
+  cumulativeGasUsed: string
+  gasUsed: string
+  confirmations: string
+  methodId: string
+  functionName: string
 }
 
 interface IContract {
@@ -61,17 +60,17 @@ const DashboardPage = () => {
       try {
         if (isConnected && address) {
           const url = `https://api-testnet.sonicscan.org/api?module=account&action=txlist&address=${address}&startblock=0&endblock=99999999&page=1&offset=10&sort=asc&apikey=HRM85EHC5SF8F45K99P85F3MZQTI99QK4N`
-          const response = await axios.get(url);
+          const response = await axios.get(url)
           // console.log(response);
-          const hashVector = [];
-          console.log(response.data.result);
-          var size = response.data.result.length;
-          for (var i = 0; i < size; i++) {
-            var transaction = response.data.result[i];
-            if(transaction.contractAddress != ""){
-            console.log(transaction.contractAddress);
-            console.log(transaction.hash);
-            hashVector.push(transaction); // Stores the hash in the vector
+          const hashVector = []
+          console.log(response.data.result)
+          const size = response.data.result.length
+          for (let i = 0; i < size; i++) {
+            const transaction = response.data.result[i]
+            if (transaction.contractAddress != "") {
+              console.log(transaction.contractAddress)
+              console.log(transaction.hash)
+              hashVector.push(transaction) // Stores the hash in the vector
             }
           }
 
@@ -295,9 +294,7 @@ const Transactions: React.FC<{ transactions: ITransaction[]; isLoading: boolean 
         <ul className="w-full space-y-4">
           {transactions.map((contract, index) => (
             <li
-              onClick={() =>
-                setExpanded((prev) => (prev === contract.hash ? null : contract.hash))
-              }
+              onClick={() => setExpanded((prev) => (prev === contract.hash ? null : contract.hash))}
               key={index}
               className="flex cursor-pointer flex-col space-y-2 rounded-lg bg-dark-6/50 px-4 py-2 shadow-md backdrop-blur-lg"
             >
@@ -314,7 +311,7 @@ const Transactions: React.FC<{ transactions: ITransaction[]; isLoading: boolean 
                   <span className="text-sm text-neutral-400">
                     {(() => {
                       const now = new Date()
-                      const diff = now.getTime() - (Number(contract.timeStamp)*1000)
+                      const diff = now.getTime() - Number(contract.timeStamp) * 1000
                       const seconds = Math.floor(diff / 1000)
                       const minutes = Math.floor(seconds / 60)
                       const hours = Math.floor(minutes / 60)
@@ -340,9 +337,7 @@ const Transactions: React.FC<{ transactions: ITransaction[]; isLoading: boolean 
                   <div className="flex flex-col space-y-1">
                     <span className="text-sm text-neutral-400">From: {contract.from}</span>
                     <span className="text-sm text-neutral-400">To: {contract.to}</span>
-                    <span className="text-sm text-neutral-400">
-                      Value: {parseInt(contract.value,16) / 1e18} S
-                    </span>
+                    <span className="text-sm text-neutral-400">Value: {parseInt(contract.value, 16) / 1e18} S</span>
                     <span className="text-sm text-neutral-400">Gas: {parseInt(contract.gas, 16)}</span>
                     <span className="text-sm text-neutral-400">
                       Gas Price: {parseInt(contract.gasPrice, 16) / 1e9} Gwei

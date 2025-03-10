@@ -4,7 +4,6 @@ import { useEffect } from "react"
 
 import { motion, stagger, useAnimate, useInView } from "framer-motion"
 
-import { cn } from "@/lib/utils"
 import clsx from "clsx"
 
 export const TypewriterEffect = ({

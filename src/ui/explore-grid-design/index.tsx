@@ -1,7 +1,6 @@
 import { useId } from "react"
 
-import { cn } from "@/lib/utils"
-import clsx from "clsx";
+import clsx from "clsx"
 
 export const Grid = ({ pattern, size, className }: { pattern?: number[][]; size?: number; className: string }) => {
   const p = pattern ?? [

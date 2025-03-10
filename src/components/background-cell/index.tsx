@@ -3,7 +3,6 @@ import React, { useEffect, useRef, useState } from "react"
 
 import { motion, useAnimation } from "framer-motion"
 
-import { cn } from "@/lib/utils"
 import clsx from "clsx"
 
 export const BackgroundCellCore = () => {

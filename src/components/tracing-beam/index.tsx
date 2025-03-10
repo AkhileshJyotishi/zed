@@ -3,7 +3,6 @@ import React, { useEffect, useRef, useState } from "react"
 
 import { motion, useScroll, useSpring, useTransform } from "framer-motion"
 
-import { cn } from "@/lib/utils"
 import clsx from "clsx"
 
 export const TracingBeam = ({ children, className }: { children: React.ReactNode; className?: string }) => {

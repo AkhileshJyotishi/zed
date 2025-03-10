@@ -108,8 +108,6 @@ export const GenerateAuditInstructions = () => [
   },
 ]
 
-
-
 export const GenerateCodeInstructions = ({
   category,
   name,

@@ -238,18 +238,18 @@ export const Deployable = ({ compiled, sources }: { compiled: IPresent[]; source
     abi: string
   }
   const addContractToLocalStorage = (contract: IContract) => {
-    let storedContracts: IContract[] = [];
-    const existing = localStorage.getItem("deployed-contracts");
+    let storedContracts: IContract[] = []
+    const existing = localStorage.getItem("deployed-contracts")
     if (existing) {
       try {
-        storedContracts = JSON.parse(existing);
+        storedContracts = JSON.parse(existing)
       } catch (error) {
-        console.error("Error parsing stored contracts:", error);
+        console.error("Error parsing stored contracts:", error)
       }
     }
-    storedContracts.push(contract);
-    localStorage.setItem("deployed-contracts", JSON.stringify(storedContracts));
-  };
+    storedContracts.push(contract)
+    localStorage.setItem("deployed-contracts", JSON.stringify(storedContracts))
+  }
   // Deploy the contract with collected arguments
   const handleDeploy = async () => {
     if (!isConnected) {
@@ -294,7 +294,7 @@ export const Deployable = ({ compiled, sources }: { compiled: IPresent[]; source
               version: "1.0",
               abi: JSON.stringify(currentContract.abi),
             }
-            addContractToLocalStorage(contractData);
+            addContractToLocalStorage(contractData)
             toast.success(`Transaction hash: ${data}`)
             toast.custom(() => (
               <div className="w-full min-w-[356px] rounded-lg border border-solid border-dark-2 bg-black p-4 text-center text-sm text-white shadow-lg">
@@ -318,9 +318,9 @@ export const Deployable = ({ compiled, sources }: { compiled: IPresent[]; source
           },
         }
       )
-     
+
       console.log("Contract deployed at:", contract)
-      
+
       toast.success(`Deploying contract`)
       setShowModal(false)
     } catch (e) {

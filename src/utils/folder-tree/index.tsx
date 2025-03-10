@@ -2,7 +2,6 @@ import React, { useState } from "react"
 
 import { Directory, File as CustomFile, FileTreeProps, SubTreeProps } from "@/interface/custom/folder-tree/folder-tree"
 
-import { cn } from "@/lib/utils"
 import { FileIcon, sortDir, sortFile } from "@/ui/file-tree/file-utils"
 import { ExtensionTypes } from "@/ui/icons"
 import clsx from "clsx"
@@ -86,7 +85,7 @@ const FileDiv = ({
         onClick={onClick}
         style={{ paddingLeft: `${depth * 10}px` }}
         className={clsx("flex cursor-pointer items-center gap-2 hover:bg-[#3c3c3c]")}
-      // onMouseOver={()=>sethovercss(true)}
+        // onMouseOver={()=>sethovercss(true)}
       >
         <FileIcon
           name={icon}
