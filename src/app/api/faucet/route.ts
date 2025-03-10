@@ -54,6 +54,6 @@ export async function POST(request: Request): Promise<Response> {
     )
   } catch (err: IError) {
     console.error("Error processing transaction:", err)
-    return NextResponse.json({ error: (err as any).message }, { status: 500 })
+    return NextResponse.json({ error: err.message }, { status: 500 })
   }
 }

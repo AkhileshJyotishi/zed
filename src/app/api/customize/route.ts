@@ -84,7 +84,7 @@ export async function POST(request: Request): Promise<Response> {
     }
 
     return NextResponse.json({ result: responseData.result }, { status: 200 })
-  } catch (err: any) {
+  } catch (err: IError) {
     console.error("Error processing code completion request:", err)
     return NextResponse.json({ error: err.message }, { status: 500 })
   }

@@ -91,7 +91,7 @@ export async function POST(request: Request): Promise<Response> {
     console.log("Parsed result:", parsed)
 
     return NextResponse.json({ result: parsed }, { status: 200 })
-  } catch (error: any) {
+  } catch (error: IError) {
     console.error("Error processing audit instructions:", error)
     return NextResponse.json({ error: error.message }, { status: 500 })
   }
